@@ -1,0 +1,102 @@
+// USER VARIABLES SECTION
+
+$accent: #d75050 // Accent Color
+$blue: #061d59
+$darkLight-1: #e4e6ed
+$darkLight-4: #f6f8fe
+$darkLight-3: #e6ebef
+$dark-light-2: #edeff5
+$grayT: #b7bac3
+$rozaLight: #ffe7e7
+$grayT-2: #b7bbc3
+$green: #32d083
+$redLight: #edbfbf
+$gray: #7f8893
+$greenbg: #12dc7b
+$grayT: #767f96
+$darkLight-5: #f3f4f7
+$blueDark: #282728
+$neboLight: #effff7
+$greenLight: #90f3c3
+$white-light: #fbfbfd
+$dark-light-4: #c6c9d1
+$violet: #3d2fb7
+$dark-light-3: #e1e7eb
+$grayD: #db9c3f
+
+$fontsize: 16px // Body Font Size
+$textcolor: #556385 // Text Color
+$lineheight: 1.65 // Document Line Height
+$userfont: Opensans, sans-serif // User Font Family
+$systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font Family
+
+// Bootstrap compatible gutter variable => $gutter
+$grid-gutter-width: 30px
+$grid-columns: 12
+$grid-breakpoints: (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px)
+$container-max-widths: (sm: 540px, md: 720px, lg: 860px) // (sm: 540px, md: 720px, lg: 960px, xl: 1140px)
+
+$gutter: $grid-gutter-width
+
+
+// IMPORT SECTION
+
+@import 'node_modules/bootstrap/scss/bootstrap-reboot.scss' // Bootstrap Reboot collection
+@import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss' // Bootstrap Breakpoints mixin
+@import 'node_modules/bootstrap/scss/bootstrap-grid.scss' // Optional Bootstrap Grid
+// @import 'node_modules/bootstrap/scss/utilities/_sizing.scss' // Optional Bootstrap Utilites
+// @import node_modules/magnific-popup/dist/magnific-popup
+
+// @import '../js/vendor/magnific-popup/magnific-popup'
+@import '../js/vendor/swiper/swiper-bundle.min.css'
+
+@import '../fonts/font-awesome/css/font-awesome.min.css' // Optional Bootstrap Grid
+
+// FONTS LOAD SECTION
+
+@mixin font($fname, $fstyle, $fweight, $furl)
+	@font-face
+		font-family: $fname
+		font-style: $fstyle
+		font-weight: $fweight
+		src: local($fname), url($furl) format('woff2')
+		// font-display: swap // Uncomment to initially display system fonts
+
+@include font('Opensans', normal, 400, '../fonts/opensans-regular-webfont.woff2')
+@include font('Opensans', normal, 700, '../fonts/opensans-bold-webfont.woff2')
+
+@include font('Opensans', italic, 400, '../fonts/opensans-italic-webfont.woff2')
+
+@include font('OpenSansSemiBold', normal, 400, '../fonts/opensans-semibold-webfont.woff2')
+
+@include font('Lato', normal, 300, '../fonts/lato-regular-webfont.woff2')
+@include font('Lato', normal, 700, '../fonts/lato-bold-webfont.woff2')
+
+@include font('Lato - Black', normal, 400, '../fonts/lato-black-webfont.woff2')
+
+
+
+// GENERAL DOCUMENT STYLES
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+input, textarea
+	outline: none
+	&:focus:required:invalid
+		border-color: red
+	&:required:valid
+		border-color: green
+
+body
+	font-family: $userfont
+	font-size: $fontsize
+	line-height: $lineheight
+	color: $textcolor
+	min-width: 320px
+	position: relative
+	overflow-x: hidden

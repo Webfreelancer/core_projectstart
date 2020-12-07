@@ -1,0 +1,209 @@
+@import config
+
+.no-padding
+	padding: 0!important
+a, a:hover, a:focus, a:visited
+	text-decoration: none
+	outline: none
+ul, li
+	list-style: none
+	margin: 0
+	padding: 0
+	display: block
+
+// Header start
+.logo
+	padding-top: 9px
+
+.header
+	border: 1px solid #e1e7eb
+	.container
+		padding: 26px  60px
+	&__nav
+		&-username,
+		&-password
+			//
+		&-username
+			padding-right: 8px
+
+		input
+			height: 50px
+			width: 140px
+			font-family: "Opensans"
+			font-size: 14px
+			font-weight: 400
+			color: #282728
+			border: none
+			border-radius: 1px
+			border-bottom: 3px solid #3d2fb7
+			background-color: #ffffff
+		&-right
+			padding-left: 8px
+			a
+				border-radius: 25px
+				color: #fff
+				height: 50px
+				line-height: 50px
+				font-family: Lato, sans-serif
+				font-weight: bold
+				font-size: 16px
+				text-decoration: none
+				&:first-child
+					margin-right: 12px
+		&-login
+			text-align: center
+			background-color: #3d2fb7
+			width: 90px
+		&-register
+			position: relative
+			padding-left: 50px
+			width: 130px
+			box-shadow: 0 12px 14px rgba(0, 206, 107, 0.15)
+			border-radius: 25px
+			background-color: #12dc7b
+			display: inline-block
+			.user-plus, .icons-svg
+				position: absolute
+				left: 20px
+				top: calc(50% - 12px)
+// Header end
+
+
+.user-plus
+	width: 20px
+	height: 20px
+	display: inline-block
+	background-image: url('../img/dest/header/user.png')
+	background-repeat: no-repeat
+	background-position: center center
+.icons-svg
+	fill: white
+	width: 22px
+	height: 22px
+
+
+// Main Content
+.main
+	.container
+		padding: 56px  60px
+		background-color: #f3f4f7
+.popular-matches
+	position: relative
+
+.sect
+	&__title
+		color: $blue
+		margin-bottom: 35px
+		font-family: Lato, sans-serif
+		font-weight: 700
+		font-size: 20px
+		display: inline-block
+		vertical-align: middle
+		a
+			background-color: $greenbg
+			width: 64px
+			height: 39px
+			line-height: 39px
+			text-align: center
+			display: inline-block
+			border-radius: 19px
+			box-shadow: 0 12px 14px rgba(0, 206, 107, 0.15)
+			background-image: linear-gradient(to top, #10cb71 0%, $greenbg 100%)
+			color: #ffffff
+			font-family: "Lato - Black", sans-serif
+			font-size: 16px
+			font-weight: 400
+			text-transform: uppercase
+			margin-right: 15px
+
+	&__slider
+		position: relative
+		max-width: 748px
+		overflow: hidden
+		&-prev, &-next
+			position: absolute
+			cursor: pointer
+			top: 0
+			img
+				width: 2em
+				height: 2em
+			&:focus
+				outline: none
+		&-prev
+			right: 46px
+		&-next
+			right: 25px
+	&-content
+		
+
+// SWIPER SLİDER START
+.swiper-container
+	width: 100%
+	height: 100%
+
+.swiper-slide
+	font-size: 18px
+	background: #fff
+
+	/* Center slide text vertically */
+	display: -webkit-box
+	display: -ms-flexbox
+	display: -webkit-flex
+	display: flex
+	-webkit-box-pack: center
+	-ms-flex-pack: center
+	-webkit-justify-content: center
+	justify-content: center
+	-webkit-box-align: center
+	-ms-flex-align: center
+	-webkit-align-items: center
+	align-items: center
+// SWIPER SLİDER THE END
+
+.w-100
+	width: 100%
+// Slider style start
+.slider__top
+	// display: flex
+
+	&-left
+		
+	&-right
+
+	&-icon
+		width: 60px
+		height: 61px
+		box-shadow: 0 0 25px rgba(63, 66, 75, 0.1)
+		background-color: #ffffff
+		border-radius: 60px
+		background-repeat: no-repeat
+		background-position: center
+		&.icon-1
+			background-image: url('../img/dest/sect-1/icon-flag-3.png')
+		&.icon-2
+			background-image: url('../img/dest/sect-1/icon-flag-2.png')
+	&-text
+		width: 69px
+		height: 31px
+		border-radius: 10px
+		box-shadow: 0 9px 25px rgba(63, 66, 75, 0.1)
+		background-color: #ffffff
+		color: $gray
+		font-family: "OpenSansSemiBold", sans-serif
+		font-size: 14px
+		font-weight: 400
+	&-number
+		width: 40px
+		height: 21px
+		color: $textcolor
+		font-family: "Open Sans"
+		font-size: 28px
+		font-weight: 700
+		font-style: normal
+		letter-spacing: normal
+		line-height: 26px
+		text-align: center
+
+
+// CUSTOM USER STYLES & IMPORTS
+
